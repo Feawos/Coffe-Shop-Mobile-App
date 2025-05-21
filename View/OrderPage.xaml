@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FeawosCoffeeApp"
+             xmlns:model="clr-namespace:FeawosCoffeeApp.Model"
+             xmlns:viewmodel="clr-namespace:FeawosCoffeeApp.ViewModel"
+             x:DataType="viewmodel:OrderViewModel"
+             x:Class="FeawosCoffeeApp.View.OrderPage"
+             Title="OrderPage">
+    
+
+    <StackLayout Padding="10">
+        <Entry Text="{Binding CustomerName}" Placeholder="Enter customer name" />
+        <Entry Text="{Binding CustomerPhone}" Placeholder="Enter phone number" Keyboard="Telephone" />
+
+        <Button Text="Place Order" Command="{Binding PlaceOrderCommand}" />
+
+        <Label Text="{Binding OrderSummary}" FontSize="18" TextColor="Green" />
+    </StackLayout>
+</ContentPage>

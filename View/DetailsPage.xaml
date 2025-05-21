@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FeawosCoffeeApp"
+             xmlns:model="clr-namespace:FeawosCoffeeApp.Model"
+             xmlns:view="clr-namespace:FeawosCoffeeApp.View"
+             xmlns:viewmodel="clr-namespace:FeawosCoffeeApp.ViewModel"
+             x:DataType="viewmodel:DetailsViewModel"
+             x:Class="FeawosCoffeeApp.View.DetailsPage"
+             Title="DetailsPage">
+    
+
+    <StackLayout Padding="10">
+        <Label Text="{Binding SelectedMenuItem.Image}" FontSize="24" />
+        <Label Text="{Binding SelectedMenuItem.Name}" FontSize="24" />
+        <Label Text="{Binding SelectedMenuItem.Price, StringFormat='Price: {0:C}'}" FontSize="18" />
+        <Label Text="{Binding SelectedMenuItem.Category}" FontSize="18" />
+    </StackLayout>
+</ContentPage>

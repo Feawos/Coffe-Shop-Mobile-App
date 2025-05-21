@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FeawosCoffeeApp"
+             xmlns:model="clr-namespace:FeawosCoffeeApp.Model"
+             xmlns:viewmodel="clr-namespace:FeawosCoffeeApp.ViewModel"
+             x:DataType="viewmodel:OrderHistoryViewModel"
+             x:Class="FeawosCoffeeApp.View.OrderHistoryPage"
+             Title="OrderHistoryPage">
+    
+
+    <StackLayout Padding="10">
+        <Label Text="Order History" FontSize="24" HorizontalOptions="Center" />
+
+        <CollectionView ItemsSource="{Binding Orders}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding OrderNumber}" />
+                            <Label Text="{Binding OrderDate}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

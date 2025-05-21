@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FeawosCoffeeApp.AppShell"
+    xmlns:local="clr-namespace:FeawosCoffeeApp"
+    xmlns:view="clr-namespace:FeawosCoffeeApp.View"
+    Shell.FlyoutBehavior="Disabled">
+
+
+
+    <ShellContent Title="Menu" ContentTemplate="{DataTemplate view:MainPage}" />
+
+    <ShellContent Title="Details" ContentTemplate="{DataTemplate view:DetailsPage}" />
+
+    <ShellContent Title="Order" ContentTemplate="{DataTemplate view:OrderPage}" />
+
+    <ShellContent Title="Order History" ContentTemplate="{DataTemplate view:OrderHistoryPage}" />
+
+</Shell>
